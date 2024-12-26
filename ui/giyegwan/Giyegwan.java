@@ -3,6 +3,7 @@ package ui.giyegwan;
 import com.intellij.uiDesigner.core.GridConstraints;
 import com.intellij.uiDesigner.core.GridLayoutManager;
 import com.intellij.uiDesigner.core.Spacer;
+import common.BackMove;
 
 import javax.swing.*;
 import java.awt.*;
@@ -14,6 +15,7 @@ public class Giyegwan extends JFrame {
     private JPanel panel;
     private JButton twoFloorButton;
     private JButton threeFloorButton;
+    private JButton backButton;
 
     public Giyegwan() {
         setContentPane(panel);
@@ -38,6 +40,13 @@ public class Giyegwan extends JFrame {
             }
         });
 
+        backButton.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                BackMove.mainForm();
+                setVisible(false);
+            }
+        });
     }
 
 
