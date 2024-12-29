@@ -4,6 +4,9 @@ import com.intellij.uiDesigner.core.GridConstraints;
 import com.intellij.uiDesigner.core.GridLayoutManager;
 import com.intellij.uiDesigner.core.Spacer;
 import common.BackMove;
+import util.IPObjectSocket;
+import util.IPBrodcastList;
+import util.WolSend;
 
 import javax.swing.*;
 import java.awt.*;
@@ -22,11 +25,21 @@ public class GiyegwanTwoFloor extends JFrame {
         setSize(500, 500);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setVisible(true);
+
         backButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
                 BackMove.giyegwan();
                 setVisible(false);
+            }
+        });
+
+        a30224Button.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                WolSend wolSend = new WolSend();
+                IPObjectSocket ipObjectSocket = new IPObjectSocket("00:1A:92:0A:2F:24", IPBrodcastList.GIYEGWAN_3F);
+                wolSend.wolStart(ipObjectSocket);
             }
         });
     }
