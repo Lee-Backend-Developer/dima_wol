@@ -1,4 +1,4 @@
-package util;
+package ip.list;
 
 public enum IPBrodcastList {
     // 기예관 2층
@@ -22,7 +22,7 @@ public enum IPBrodcastList {
         this.location = location;
     }
 
-    String getLocation() {
+    public String getLocation() {
         return location;
     }
 }

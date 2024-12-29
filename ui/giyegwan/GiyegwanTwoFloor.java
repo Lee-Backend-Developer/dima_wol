@@ -4,9 +4,10 @@ import com.intellij.uiDesigner.core.GridConstraints;
 import com.intellij.uiDesigner.core.GridLayoutManager;
 import com.intellij.uiDesigner.core.Spacer;
 import common.BackMove;
-import util.IPObjectSocket;
-import util.IPBrodcastList;
-import util.WolSend;
+import ip.list.giyegwan.A30225MacAddress;
+import wol.IPObjectSocket;
+import ip.list.IPBrodcastList;
+import wol.WolSend;
 
 import javax.swing.*;
 import java.awt.*;
@@ -38,8 +39,11 @@ public class GiyegwanTwoFloor extends JFrame {
             @Override
             public void mouseClicked(MouseEvent e) {
                 WolSend wolSend = new WolSend();
-                IPObjectSocket ipObjectSocket = new IPObjectSocket("00:1A:92:0A:2F:24", IPBrodcastList.GIYEGWAN_3F);
-                wolSend.wolStart(ipObjectSocket);
+                for (String macAddress : A30225MacAddress.MAC_ADDRESS) {
+                    IPObjectSocket ipObjectSocket = new IPObjectSocket(macAddress, IPBrodcastList.GIYEGWAN_2F);
+                    wolSend.wolStart(ipObjectSocket);
+                }
+                System.out.println(A30225MacAddress.MAC_ADDRESS.length);
             }
         });
     }
