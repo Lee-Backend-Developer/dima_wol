@@ -4,6 +4,10 @@ import com.intellij.uiDesigner.core.GridConstraints;
 import com.intellij.uiDesigner.core.GridLayoutManager;
 import com.intellij.uiDesigner.core.Spacer;
 import ui.common.BackMove;
+import wol.IPObjectSocket;
+import wol.WolSend;
+import wol.ip.list.IPBrodcastList;
+import wol.ip.list.giyegwan.GiyegwanComputerRoomMacAddr;
 
 import javax.swing.*;
 import java.awt.*;
@@ -32,6 +36,14 @@ public class GiyegwanThreeFloor extends JFrame {
             }
         });
 
+        a30311Button.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                for (String macAddr : GiyegwanComputerRoomMacAddr.a30311) {
+                    WolSend.wolStart(new IPObjectSocket(macAddr, IPBrodcastList.GIYEGWAN_3F));
+                }
+            }
+        });
     }
 
     {

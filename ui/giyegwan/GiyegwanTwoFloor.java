@@ -38,12 +38,9 @@ public class GiyegwanTwoFloor extends JFrame {
         a30225Button.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                WolSend wolSend = new WolSend();
                 for (String macAddress : GiyegwanComputerRoomMacAddr.a30225) {
-                    IPObjectSocket ipObjectSocket = new IPObjectSocket(macAddress, IPBrodcastList.GIYEGWAN_2F);
-                    wolSend.wolStart(ipObjectSocket);
+                    WolSend.wolStart(new IPObjectSocket(macAddress, IPBrodcastList.GIYEGWAN_2F));
                 }
-                System.out.println(GiyegwanComputerRoomMacAddr.a30225.length);
             }
         });
     }
