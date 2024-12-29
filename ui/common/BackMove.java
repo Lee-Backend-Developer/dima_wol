@@ -1,4 +1,4 @@
-package common;
+package ui.common;
 
 import ui.MainForm;
 import ui.giyegwan.Giyegwan;

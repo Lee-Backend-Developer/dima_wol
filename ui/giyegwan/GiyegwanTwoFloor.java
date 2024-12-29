@@ -3,10 +3,10 @@ package ui.giyegwan;
 import com.intellij.uiDesigner.core.GridConstraints;
 import com.intellij.uiDesigner.core.GridLayoutManager;
 import com.intellij.uiDesigner.core.Spacer;
-import common.BackMove;
-import ip.list.giyegwan.A30225MacAddress;
+import ui.common.BackMove;
+import wol.ip.list.giyegwan.GiyegwanComputerRoomMacAddr;
 import wol.IPObjectSocket;
-import ip.list.IPBrodcastList;
+import wol.ip.list.IPBrodcastList;
 import wol.WolSend;
 
 import javax.swing.*;
@@ -15,7 +15,7 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
 public class GiyegwanTwoFloor extends JFrame {
-    private JButton a30224Button;
+    private JButton a30225Button;
     private JButton disableButton;
     private JButton backButton;
     private JPanel panel;
@@ -35,15 +35,15 @@ public class GiyegwanTwoFloor extends JFrame {
             }
         });
 
-        a30224Button.addMouseListener(new MouseAdapter() {
+        a30225Button.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
                 WolSend wolSend = new WolSend();
-                for (String macAddress : A30225MacAddress.MAC_ADDRESS) {
+                for (String macAddress : GiyegwanComputerRoomMacAddr.a30225) {
                     IPObjectSocket ipObjectSocket = new IPObjectSocket(macAddress, IPBrodcastList.GIYEGWAN_2F);
                     wolSend.wolStart(ipObjectSocket);
                 }
-                System.out.println(A30225MacAddress.MAC_ADDRESS.length);
+                System.out.println(GiyegwanComputerRoomMacAddr.a30225.length);
             }
         });
     }
@@ -65,9 +65,9 @@ public class GiyegwanTwoFloor extends JFrame {
     private void $$$setupUI$$$() {
         panel = new JPanel();
         panel.setLayout(new GridLayoutManager(4, 1, new Insets(0, 0, 0, 0), -1, -1));
-        a30224Button = new JButton();
-        a30224Button.setText("30224");
-        panel.add(a30224Button, new GridConstraints(1, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+        a30225Button = new JButton();
+        a30225Button.setText("30224");
+        panel.add(a30225Button, new GridConstraints(1, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         final Spacer spacer1 = new Spacer();
         panel.add(spacer1, new GridConstraints(3, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_VERTICAL, 1, GridConstraints.SIZEPOLICY_WANT_GROW, null, null, null, 0, false));
         disableButton = new JButton();

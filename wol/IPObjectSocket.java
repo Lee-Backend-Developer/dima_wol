@@ -1,6 +1,6 @@
 package wol;
 
-import ip.list.IPBrodcastList;
+import wol.ip.list.IPBrodcastList;
 
 public class IPObjectSocket {
 

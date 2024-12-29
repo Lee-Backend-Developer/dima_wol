@@ -1,4 +1,4 @@
-package ip.list;
+package wol.ip.list;
 
 public enum IPBrodcastList {
     // 기예관 2층
