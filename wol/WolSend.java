@@ -19,7 +19,7 @@ public class WolSend {
     private static final int PORT = 9;
 
     // WOL 패킷 전송(단일)
-    public void wolStart(IPObjectSocket ipObjectSocket) {
+    public static void wolStart(IPObjectSocket ipObjectSocket) {
         try {
             byte[] macBytes = ipObjectSocket.getMacBytes();
 
@@ -61,7 +61,7 @@ public class WolSend {
     }
 
     // 패킷 전송
-    private void packetSend(IPObjectSocket ipObjectSocket, byte[] sendPacket) throws IOException {
+    private static void packetSend(IPObjectSocket ipObjectSocket, byte[] sendPacket) throws IOException {
         InetAddress address = InetAddress.getByName(ipObjectSocket.getIpBroadcast());
         DatagramPacket packet = new DatagramPacket(sendPacket, sendPacket.length, address, PORT);
         DatagramSocket socket = new DatagramSocket();
@@ -72,7 +72,7 @@ public class WolSend {
     /**
      * 패킷 앞부분에 ff ff ff ff ff ff를 추가
      */
-    private byte[] addHexFF(byte[] macAddressArray) {
+    private static byte[] addHexFF(byte[] macAddressArray) {
 
         byte[] bytes = new byte[6 + 16 * macAddressArray.length];
         for (int i = 0; i < 6; i++) {
