@@ -18,7 +18,6 @@ public class GiyegwanThreeFloor extends JFrame {
     private JButton backButton;
     private JButton a30311Button;
     private JButton a30323Button;
-    private JButton a30411Button;
     private JPanel panel;
 
     public GiyegwanThreeFloor() {
@@ -40,6 +39,14 @@ public class GiyegwanThreeFloor extends JFrame {
             @Override
             public void mouseClicked(MouseEvent e) {
                 for (String macAddr : GiyegwanComputerRoomMacAddr.a30311) {
+                    WolSend.wolStart(new IPObjectSocket(macAddr, IPBrodcastList.GIYEGWAN_3F));
+                }
+            }
+        });
+        a30323Button.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                for (String macAddr : GiyegwanComputerRoomMacAddr.a30323) {
                     WolSend.wolStart(new IPObjectSocket(macAddr, IPBrodcastList.GIYEGWAN_3F));
                 }
             }
@@ -74,9 +81,6 @@ public class GiyegwanThreeFloor extends JFrame {
         a30323Button = new JButton();
         a30323Button.setText("30323");
         panel.add(a30323Button, new GridConstraints(2, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
-        a30411Button = new JButton();
-        a30411Button.setText("30411");
-        panel.add(a30411Button, new GridConstraints(3, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
     }
 
     /**
