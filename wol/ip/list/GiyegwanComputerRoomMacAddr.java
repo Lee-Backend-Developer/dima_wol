@@ -1,4 +1,4 @@
-package wol.ip.list.giyegwan;
+package wol.ip.list;
 
 public abstract class GiyegwanComputerRoomMacAddr {
     public static final String[] a30225 =
@@ -28,4 +28,12 @@ public abstract class GiyegwanComputerRoomMacAddr {
             "CC-96-E5-03-8B-77", "CC-96-E5-03-7E-47", "CC-96-E5-03-8F-58", "CC-96-E5-03-7F-8C",
             "CC-96-E5-03-8D-60",
     };
+
+    public static final String[] a30323 = {
+            "00-4E-01-C0-E8-78", "00-4E-01-C0-E9-71", "00-4E-01-C0-E9-C0", "00-4E-01-C0-E7-E8",
+            "00-4E-01-C1-00-4B", "00-4E-01-C0-E7-F3", "00-4E-01-C0-E9-C5", "00-4E-01-C0-E9-56",
+            "00-4E-01-C0-E9-78", "00-4E-01-C0-EA-7A", "00-4E-01-C0-EB-EE", "00-4E-01-C0-E9-16",
+            "00-4E-01-C0-E8-C6", "00-4E-01-C0-18-73",
+    };
+
 }

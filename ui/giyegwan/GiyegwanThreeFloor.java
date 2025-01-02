@@ -7,7 +7,7 @@ import ui.common.BackMove;
 import wol.IPObjectSocket;
 import wol.WolSend;
 import wol.ip.list.IPBrodcastList;
-import wol.ip.list.giyegwan.GiyegwanComputerRoomMacAddr;
+import wol.ip.list.GiyegwanComputerRoomMacAddr;
 
 import javax.swing.*;
 import java.awt.*;

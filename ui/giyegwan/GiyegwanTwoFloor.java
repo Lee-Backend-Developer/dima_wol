@@ -4,7 +4,7 @@ import com.intellij.uiDesigner.core.GridConstraints;
 import com.intellij.uiDesigner.core.GridLayoutManager;
 import com.intellij.uiDesigner.core.Spacer;
 import ui.common.BackMove;
-import wol.ip.list.giyegwan.GiyegwanComputerRoomMacAddr;
+import wol.ip.list.GiyegwanComputerRoomMacAddr;
 import wol.IPObjectSocket;
 import wol.ip.list.IPBrodcastList;
 import wol.WolSend;
