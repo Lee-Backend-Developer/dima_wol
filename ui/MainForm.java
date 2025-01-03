@@ -2,6 +2,7 @@ package ui;
 
 import com.intellij.uiDesigner.core.GridConstraints;
 import com.intellij.uiDesigner.core.GridLayoutManager;
+import ui.deogseong.Deogseong;
 import ui.giyegwan.Giyegwan;
 
 import javax.swing.*;
@@ -27,6 +28,13 @@ public class MainForm extends JFrame {
             @Override
             public void mouseClicked(MouseEvent e) {
                 new Giyegwan();
+                setVisible(false);
+            }
+        });
+        deogseong.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                new Deogseong();
                 setVisible(false);
             }
         });
