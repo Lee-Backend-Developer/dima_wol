@@ -149,6 +149,6 @@ Temporary Items
 *.icloud
 
 ### 맥 주소 리스트 커밋 X
-ip.*
+ip.*.*
 
 # End of https://www.toptal.com/developers/gitignore/api/macos,intellij+all,java
