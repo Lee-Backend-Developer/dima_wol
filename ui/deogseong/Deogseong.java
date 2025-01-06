@@ -31,23 +31,32 @@ public class Deogseong extends JFrame {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setVisible(true);
 
-        twoFloorButton.addMouseListener(new MouseAdapter() {
-            @Override
-            public void mouseClicked(MouseEvent e) {
-                super.mouseClicked(e);
-            }
-        });
         backButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                BackMove.deogseong();
+                BackMove.mainForm();
                 setVisible(false);
             }
         });
+
         twoFloorButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
                 new DeogseongTwoFloor();
+                setVisible(false);
+            }
+        });
+        threeFloorButton.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                new DeogseongThreeFloor();
+                setVisible(false);
+            }
+        });
+        fourFloorButton.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                new DeogseongFourFloor();
                 setVisible(false);
             }
         });

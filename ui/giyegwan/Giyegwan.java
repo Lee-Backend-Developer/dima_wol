@@ -83,4 +83,5 @@ public class Giyegwan extends JFrame {
     public JComponent $$$getRootComponent$$$() {
         return panel;
     }
+
 }
