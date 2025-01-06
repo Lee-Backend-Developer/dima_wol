@@ -26,7 +26,7 @@ public class Dijain extends JFrame {
 
     public Dijain() {
         setContentPane(panel);
-        setTitle("기예관 전원켜기");
+        setTitle("디자인센터 전원켜기");
         setSize(500, 500);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setVisible(true);
