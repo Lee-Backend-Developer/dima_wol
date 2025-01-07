@@ -12,7 +12,7 @@ import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
-public class DijainThreeFloor extends JFrame {
+public class DijainThreeFloor<T extends DijainComputerRoomMacAddr> extends JFrame {
     private JButton 이전Button;
     private JButton a100315Button;
     private JPanel panel;
@@ -34,7 +34,7 @@ public class DijainThreeFloor extends JFrame {
             @Override
             public void mouseClicked(MouseEvent e) {
                 //todo 임시
-                for (String macAddress : DijainComputerRoomMacAddr.a100212) {
+                for (String macAddress : T.a100212) {
                     WolSend.wolStart(new IPObjectSocket(macAddress, IPBrodcastList.DIJAINCENTER_1F_2F));
                 }
             }

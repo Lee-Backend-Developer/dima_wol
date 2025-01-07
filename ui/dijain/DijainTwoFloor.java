@@ -11,7 +11,7 @@ import javax.swing.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
-public class DijainTwoFloor extends JFrame {
+public class DijainTwoFloor<T extends DijainComputerRoomMacAddr> extends JFrame {
     private JButton 이전Button;
     private JButton a100212Button;
     private JPanel panel;
@@ -32,7 +32,7 @@ public class DijainTwoFloor extends JFrame {
         a100212Button.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                for (String macAddress : DijainComputerRoomMacAddr.a100212) {
+                for (String macAddress : T.a100212) {
                     WolSend.wolStart(new IPObjectSocket(macAddress, IPBrodcastList.DIJAINCENTER_1F_2F));
                 }
             }

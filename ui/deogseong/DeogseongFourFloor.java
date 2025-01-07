@@ -10,7 +10,7 @@ import javax.swing.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
-public class DeogseongFourFloor extends JFrame {
+public class DeogseongFourFloor<T extends DeogseongComputerRoomMacAddr> extends JFrame {
     private JButton 이전Button;
     private JButton a50408Button;
     private JPanel panel;
@@ -32,7 +32,7 @@ public class DeogseongFourFloor extends JFrame {
         a50408Button.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                for (String macAddress : DeogseongComputerRoomMacAddr.a50408) {
+                for (String macAddress : T.a50408) {
                     WolSend.wolStart(new IPObjectSocket(macAddress, IPBrodcastList.DEOKSEONGGWAN_4F));
                 }
             }

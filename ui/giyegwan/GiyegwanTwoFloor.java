@@ -8,13 +8,14 @@ import wol.ip.list.GiyegwanComputerRoomMacAddr;
 import wol.IPObjectSocket;
 import wol.ip.list.IPBrodcastList;
 import wol.WolSend;
+import wol.ip.list.MacAddr;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
-public class GiyegwanTwoFloor extends JFrame {
+public class GiyegwanTwoFloor<T extends GiyegwanComputerRoomMacAddr> extends JFrame{
     private JButton a30225Button;
     private JButton disableButton;
     private JButton backButton;
@@ -38,7 +39,7 @@ public class GiyegwanTwoFloor extends JFrame {
         a30225Button.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                for (String macAddress : GiyegwanComputerRoomMacAddr.a30225) {
+                for (String macAddress : T.a30225) {
                     WolSend.wolStart(new IPObjectSocket(macAddress, IPBrodcastList.GIYEGWAN_2F));
                 }
             }

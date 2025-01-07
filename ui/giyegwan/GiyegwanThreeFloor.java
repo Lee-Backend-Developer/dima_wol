@@ -14,7 +14,7 @@ import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
-public class GiyegwanThreeFloor extends JFrame {
+public class GiyegwanThreeFloor<T extends GiyegwanComputerRoomMacAddr> extends JFrame {
     private JButton backButton;
     private JButton a30311Button;
     private JButton a30323Button;
@@ -38,7 +38,7 @@ public class GiyegwanThreeFloor extends JFrame {
         a30311Button.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                for (String macAddr : GiyegwanComputerRoomMacAddr.a30311) {
+                for (String macAddr : T.a30311) {
                     WolSend.wolStart(new IPObjectSocket(macAddr, IPBrodcastList.GIYEGWAN_3F));
                 }
             }
@@ -46,7 +46,7 @@ public class GiyegwanThreeFloor extends JFrame {
         a30323Button.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                for (String macAddr : GiyegwanComputerRoomMacAddr.a30323) {
+                for (String macAddr : T.a30323) {
                     WolSend.wolStart(new IPObjectSocket(macAddr, IPBrodcastList.GIYEGWAN_3F));
                 }
             }

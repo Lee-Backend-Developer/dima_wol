@@ -9,7 +9,7 @@ import javax.swing.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
-public class DeogseongTwoFloor extends JFrame {
+public class DeogseongTwoFloor<T extends DeogseongComputerRoomMacAddr> extends JFrame {
     private JButton 이전Button;
     private JButton a50203Button;
     private JButton a50204Button;
@@ -35,7 +35,7 @@ public class DeogseongTwoFloor extends JFrame {
         a50203Button.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                for (String macAddress : DeogseongComputerRoomMacAddr.a50203) {
+                for (String macAddress : T.a50203) {
                     WolSend.wolStart(new IPObjectSocket(macAddress, IPBrodcastList.DEOKSEONGGWAN_2F));
                 }
             }
@@ -43,7 +43,7 @@ public class DeogseongTwoFloor extends JFrame {
         a50204Button.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                for (String macAddress : DeogseongComputerRoomMacAddr.a50204) {
+                for (String macAddress : T.a50204) {
                     WolSend.wolStart(new IPObjectSocket(macAddress, IPBrodcastList.DEOKSEONGGWAN_2F));
                 }
             }
@@ -51,7 +51,7 @@ public class DeogseongTwoFloor extends JFrame {
         a50206Button.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                for (String macAddress : DeogseongComputerRoomMacAddr.a50206) {
+                for (String macAddress : T.a50206) {
                     WolSend.wolStart(new IPObjectSocket(macAddress, IPBrodcastList.DEOKSEONGGWAN_2F));
                 }
             }
@@ -59,7 +59,7 @@ public class DeogseongTwoFloor extends JFrame {
         a50209Button.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                for (String macAddress : DeogseongComputerRoomMacAddr.a50209) {
+                for (String macAddress : T.a50209) {
                     WolSend.wolStart(new IPObjectSocket(macAddress, IPBrodcastList.DEOKSEONGGWAN_2F));
                 }
             }
@@ -67,7 +67,7 @@ public class DeogseongTwoFloor extends JFrame {
         a50211Button.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                for (String macAddress : DeogseongComputerRoomMacAddr.a50211) {
+                for (String macAddress : T.a50211) {
                     WolSend.wolStart(new IPObjectSocket(macAddress, IPBrodcastList.DEOKSEONGGWAN_2F));
                 }
             }
