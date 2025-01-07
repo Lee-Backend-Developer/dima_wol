@@ -24,6 +24,7 @@ public class DeogseongTwoFloor extends JFrame {
         setSize(500, 500);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setVisible(true);
+
         이전Button.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
@@ -35,6 +36,38 @@ public class DeogseongTwoFloor extends JFrame {
             @Override
             public void mouseClicked(MouseEvent e) {
                 for (String macAddress : DeogseongComputerRoomMacAddr.a50203) {
+                    WolSend.wolStart(new IPObjectSocket(macAddress, IPBrodcastList.DEOKSEONGGWAN_2F));
+                }
+            }
+        });
+        a50204Button.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                for (String macAddress : DeogseongComputerRoomMacAddr.a50204) {
+                    WolSend.wolStart(new IPObjectSocket(macAddress, IPBrodcastList.DEOKSEONGGWAN_2F));
+                }
+            }
+        });
+        a50206Button.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                for (String macAddress : DeogseongComputerRoomMacAddr.a50206) {
+                    WolSend.wolStart(new IPObjectSocket(macAddress, IPBrodcastList.DEOKSEONGGWAN_2F));
+                }
+            }
+        });
+        a50209Button.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                for (String macAddress : DeogseongComputerRoomMacAddr.a50209) {
+                    WolSend.wolStart(new IPObjectSocket(macAddress, IPBrodcastList.DEOKSEONGGWAN_2F));
+                }
+            }
+        });
+        a50211Button.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                for (String macAddress : DeogseongComputerRoomMacAddr.a50211) {
                     WolSend.wolStart(new IPObjectSocket(macAddress, IPBrodcastList.DEOKSEONGGWAN_2F));
                 }
             }

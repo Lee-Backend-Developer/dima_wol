@@ -1,6 +1,11 @@
 package ui.dijain;
 
 import ui.common.BackMove;
+import wol.IPObjectSocket;
+import wol.WolSend;
+import wol.ip.list.DeogseongComputerRoomMacAddr;
+import wol.ip.list.DijainComputerRoomMacAddr;
+import wol.ip.list.IPBrodcastList;
 
 import javax.swing.*;
 import java.awt.*;
@@ -23,6 +28,15 @@ public class DijainThreeFloor extends JFrame {
             public void mouseClicked(MouseEvent e) {
                 BackMove.designCenter();
                 setVisible(false);
+            }
+        });
+        a100315Button.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                //todo 임시
+                for (String macAddress : DijainComputerRoomMacAddr.a100212) {
+                    WolSend.wolStart(new IPObjectSocket(macAddress, IPBrodcastList.DIJAINCENTER_1F_2F));
+                }
             }
         });
     }
