@@ -1,6 +1,6 @@
 package wol.ip.list;
 
-public abstract class GiyegwanComputerRoomMacAddr {
+public interface GiyegwanComputerRoomMacAddr extends MacAddr {
     public static final String[] a30225 =
             {
                     "40-B0-34-41-1D-67", "40-B0-34-45-C0-A5", "40-B0-34-45-C0-7A", "40-B0-34-41-1D-30",
