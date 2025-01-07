@@ -13,6 +13,9 @@ public enum IPBrodcastList {
     // 덕성관 3층
     DEOKSEONGGWAN_3F("172.20.43.255"),
 
+    // 덕성관 4층
+    DEOKSEONGGWAN_4F("172.20.44.255"),
+
     // 디자인센터 1층,2층
     DIJAINCENTER_1F_2F("172.20.51.255");
 
