@@ -7,7 +7,6 @@ import ui.common.BackMove;
 import wol.ip.list.GiyegwanComputerRoomMacAddr;
 import wol.IPObjectSocket;
 import wol.ip.list.IPBrodcastList;
-import wol.WolSend;
 import wol.ip.list.MacAddr;
 
 import javax.swing.*;
@@ -40,10 +39,17 @@ public class GiyegwanTwoFloor<T extends GiyegwanComputerRoomMacAddr> extends JFr
             @Override
             public void mouseClicked(MouseEvent e) {
                 for (String macAddress : T.a30225) {
-                    WolSend.wolStart(new IPObjectSocket(macAddress, IPBrodcastList.GIYEGWAN_2F));
+//                    WolSend.wolStart(new IPObjectSocket(macAddress, IPBrodcastList.GIYEGWAN_2F));
                 }
             }
         });
+    }
+
+    public void wolStart(String[] macAddr) {
+
+        for (String macAddress : macAddr) {
+//            WolSend.wolStart(new IPObjectSocket(macAddress, IPBrodcastList.GIYEGWAN_2F));
+        }
     }
 
     {

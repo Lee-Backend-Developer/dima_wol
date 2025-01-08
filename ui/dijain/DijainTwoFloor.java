@@ -3,7 +3,6 @@ package ui.dijain;
 import ui.common.BackMove;
 import wol.IPObjectSocket;
 import wol.WolSend;
-import wol.ip.list.DeogseongComputerRoomMacAddr;
 import wol.ip.list.DijainComputerRoomMacAddr;
 import wol.ip.list.IPBrodcastList;
 

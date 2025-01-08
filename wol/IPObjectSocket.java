@@ -21,7 +21,7 @@ public class IPObjectSocket {
     }
 
     public String getIpBroadcast() {
-        return ipBrodcastList.getLocation();
+        return ipBrodcastList.getBrodcast();
     }
 
     public byte[] getMacBytes() {

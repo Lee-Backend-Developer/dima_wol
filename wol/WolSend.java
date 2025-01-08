@@ -14,7 +14,7 @@ import java.net.InetAddress;
  * 6 Byte + (6 Byte * 16) = 102 Byte
  *
  */
-public class WolSend {
+class WolSend {
     // WOL PORT
     private static final int PORT = 9;
 
@@ -39,7 +39,7 @@ public class WolSend {
         }
     }
     // // WOL 패킷 전송(복수)
-    public void wolStart(IPObjectSocket[] ipObjectSockets) {
+    public static void wolStart(IPObjectSocket[] ipObjectSockets) {
         try {
             for (IPObjectSocket ipObjectSocket : ipObjectSockets) {
 

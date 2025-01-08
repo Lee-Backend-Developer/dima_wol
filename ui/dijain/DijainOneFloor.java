@@ -2,8 +2,7 @@ package ui.dijain;
 
 import ui.common.BackMove;
 import wol.IPObjectSocket;
-import wol.WolSend;
-import wol.ip.list.DeogseongComputerRoomMacAddr;
+import wol.WolSendArrayAdapter;
 import wol.ip.list.DijainComputerRoomMacAddr;
 import wol.ip.list.IPBrodcastList;
 
@@ -34,7 +33,7 @@ public class DijainOneFloor<T extends DijainComputerRoomMacAddr> extends JFrame{
             @Override
             public void mouseClicked(MouseEvent e) {
                 for (String macAddress : T.a100111) {
-                    WolSend.wolStart(new IPObjectSocket(macAddress, IPBrodcastList.DIJAINCENTER_1F_2F));
+                    WolSendArrayAdapter.ipObjectSocket((new IPObjectSocket(macAddress, IPBrodcastList.DIJAINCENTER_1F_2F)));
                 }
             }
         });

@@ -2,14 +2,13 @@ package ui.deogseong;
 
 import wol.IPObjectSocket;
 import wol.WolSend;
-import wol.ip.list.DeogseongComputerRoomMacAddr;
 import wol.ip.list.IPBrodcastList;
 
 import javax.swing.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
-public class DeogseongTwoFloor<T extends DeogseongComputerRoomMacAddr> extends JFrame {
+public class DeogseongTwoFloor<T extends DeogseongComputerComputerBulid> extends JFrame {
     private JButton 이전Button;
     private JButton a50203Button;
     private JButton a50204Button;

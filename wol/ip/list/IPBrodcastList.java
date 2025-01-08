@@ -19,13 +19,13 @@ public enum IPBrodcastList {
     // 디자인센터 1층,2층
     DIJAINCENTER_1F_2F("172.20.51.255");
 
-    private final String location;
+    private final String brodcast;
 
-    IPBrodcastList(String location) {
-        this.location = location;
+    IPBrodcastList(String brodcast) {
+        this.brodcast = brodcast;
     }
 
-    public String getLocation() {
-        return location;
+    public String getBrodcast() {
+        return brodcast;
     }
 }
