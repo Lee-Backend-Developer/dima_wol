@@ -1,4 +1,4 @@
-package wol.school.frame;
+package school;
 
 public class Room extends Floor {
     // 호실명
@@ -10,8 +10,8 @@ public class Room extends Floor {
     // 컴퓨터 브로드캐스트 주소
     private String broadcastAddress;
 
-    public Room(String floorName, String roomName, String[] macAddress, String broadcastAddress) {
-        super();
+    public Room(int floorNumber, String roomName, String[] macAddress, String broadcastAddress) {
+        super(floorNumber);
 
         this.roomName = roomName;
         this.macAddress = macAddress;
