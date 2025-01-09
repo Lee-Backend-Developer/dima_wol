@@ -1,14 +1,15 @@
 package ui.deogseong;
 
+import sun.applet.Main;
 import wol.IPObjectSocket;
-import wol.WolSend;
+import wol.ip.list.DeogseongComputerComputerBuilding;
 import wol.ip.list.IPBrodcastList;
 
 import javax.swing.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
-public class DeogseongTwoFloor<T extends DeogseongComputerComputerBulid> extends JFrame {
+public class DeogseongTwoFloor<T extends DeogseongComputerComputerBuilding> extends JFrame {
     private JButton 이전Button;
     private JButton a50203Button;
     private JButton a50204Button;
@@ -17,7 +18,9 @@ public class DeogseongTwoFloor<T extends DeogseongComputerComputerBulid> extends
     private JButton a50211Button;
     private JPanel panel;
 
+
     public DeogseongTwoFloor() {
+
         setContentPane(panel);
         setTitle("덕성관 전원켜기");
         setSize(500, 500);
@@ -34,16 +37,16 @@ public class DeogseongTwoFloor<T extends DeogseongComputerComputerBulid> extends
         a50203Button.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                for (String macAddress : T.a50203) {
-                    WolSend.wolStart(new IPObjectSocket(macAddress, IPBrodcastList.DEOKSEONGGWAN_2F));
-                }
+
+
             }
         });
         a50204Button.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
+
                 for (String macAddress : T.a50204) {
-                    WolSend.wolStart(new IPObjectSocket(macAddress, IPBrodcastList.DEOKSEONGGWAN_2F));
+//                    WolSend.wolStart(new IPObjectSocket(macAddress, IPBrodcastList.DEOKSEONGGWAN_2F));
                 }
             }
         });
@@ -51,7 +54,7 @@ public class DeogseongTwoFloor<T extends DeogseongComputerComputerBulid> extends
             @Override
             public void mouseClicked(MouseEvent e) {
                 for (String macAddress : T.a50206) {
-                    WolSend.wolStart(new IPObjectSocket(macAddress, IPBrodcastList.DEOKSEONGGWAN_2F));
+//                    WolSend.wolStart(new IPObjectSocket(macAddress, IPBrodcastList.DEOKSEONGGWAN_2F));
                 }
             }
         });
@@ -59,7 +62,7 @@ public class DeogseongTwoFloor<T extends DeogseongComputerComputerBulid> extends
             @Override
             public void mouseClicked(MouseEvent e) {
                 for (String macAddress : T.a50209) {
-                    WolSend.wolStart(new IPObjectSocket(macAddress, IPBrodcastList.DEOKSEONGGWAN_2F));
+//                    WolSend.wolStart(new IPObjectSocket(macAddress, IPBrodcastList.DEOKSEONGGWAN_2F));
                 }
             }
         });
@@ -67,7 +70,7 @@ public class DeogseongTwoFloor<T extends DeogseongComputerComputerBulid> extends
             @Override
             public void mouseClicked(MouseEvent e) {
                 for (String macAddress : T.a50211) {
-                    WolSend.wolStart(new IPObjectSocket(macAddress, IPBrodcastList.DEOKSEONGGWAN_2F));
+//                    WolSend.wolStart(new IPObjectSocket(macAddress, IPBrodcastList.DEOKSEONGGWAN_2F));
                 }
             }
         });

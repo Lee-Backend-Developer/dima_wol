@@ -5,7 +5,6 @@ import com.intellij.uiDesigner.core.GridLayoutManager;
 import com.intellij.uiDesigner.core.Spacer;
 import ui.common.BackMove;
 import wol.IPObjectSocket;
-import wol.WolSend;
 import wol.ip.list.IPBrodcastList;
 import wol.ip.list.GiyegwanComputerRoomMacAddr;
 
@@ -39,7 +38,7 @@ public class GiyegwanThreeFloor<T extends GiyegwanComputerRoomMacAddr> extends J
             @Override
             public void mouseClicked(MouseEvent e) {
                 for (String macAddr : T.a30311) {
-                    WolSend.wolStart(new IPObjectSocket(macAddr, IPBrodcastList.GIYEGWAN_3F));
+//                    WolSend.wolStart(new IPObjectSocket(macAddr, IPBrodcastList.GIYEGWAN_3F));
                 }
             }
         });
@@ -47,7 +46,7 @@ public class GiyegwanThreeFloor<T extends GiyegwanComputerRoomMacAddr> extends J
             @Override
             public void mouseClicked(MouseEvent e) {
                 for (String macAddr : T.a30323) {
-                    WolSend.wolStart(new IPObjectSocket(macAddr, IPBrodcastList.GIYEGWAN_3F));
+//                    WolSend.wolStart(new IPObjectSocket(macAddr, IPBrodcastList.GIYEGWAN_3F));
                 }
             }
         });

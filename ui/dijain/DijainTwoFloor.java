@@ -1,10 +1,7 @@
 package ui.dijain;
 
 import ui.common.BackMove;
-import wol.IPObjectSocket;
-import wol.WolSend;
 import wol.ip.list.DijainComputerRoomMacAddr;
-import wol.ip.list.IPBrodcastList;
 
 import javax.swing.*;
 import java.awt.event.MouseAdapter;
@@ -32,7 +29,7 @@ public class DijainTwoFloor<T extends DijainComputerRoomMacAddr> extends JFrame 
             @Override
             public void mouseClicked(MouseEvent e) {
                 for (String macAddress : T.a100212) {
-                    WolSend.wolStart(new IPObjectSocket(macAddress, IPBrodcastList.DIJAINCENTER_1F_2F));
+                    //WolSend.wolStart(new IPObjectSocket(macAddress, IPBrodcastList.DIJAINCENTER_1F_2F));
                 }
             }
         });

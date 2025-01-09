@@ -3,6 +3,11 @@ package ui.deogseong;
 import com.intellij.uiDesigner.core.GridConstraints;
 import com.intellij.uiDesigner.core.GridLayoutManager;
 import ui.common.BackMove;
+import wol.ip.list.DeogseongComputerComputerBuilding;
+import wol.ip.list.IPBrodcastList;
+import school.Building;
+import school.ComputerLab;
+import school.Room;
 
 import javax.swing.*;
 import java.awt.*;

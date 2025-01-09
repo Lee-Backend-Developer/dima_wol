@@ -2,14 +2,14 @@ package ui.deogseong;
 
 import ui.common.BackMove;
 import wol.IPObjectSocket;
-import wol.WolSend;
+import wol.ip.list.DeogseongComputerComputerBuilding;
 import wol.ip.list.IPBrodcastList;
 
 import javax.swing.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
-public class DeogseongThreeFloor<T extends DeogseongComputerComputerBulid> extends JFrame {
+public class DeogseongThreeFloor<T extends DeogseongComputerComputerBuilding> extends JFrame {
     private JPanel panel;
     private JButton 이전Button;
     private JButton a50305Button;
@@ -32,7 +32,7 @@ public class DeogseongThreeFloor<T extends DeogseongComputerComputerBulid> exten
             @Override
             public void mouseClicked(MouseEvent e) {
                 for (String macAddress : T.a50305) {
-                    WolSend.wolStart(new IPObjectSocket(macAddress, IPBrodcastList.DEOKSEONGGWAN_3F));
+//                    WolSend.wolStart(new IPObjectSocket(macAddress, IPBrodcastList.DEOKSEONGGWAN_3F));
                 }
             }
         });
@@ -40,7 +40,7 @@ public class DeogseongThreeFloor<T extends DeogseongComputerComputerBulid> exten
             @Override
             public void mouseClicked(MouseEvent e) {
                 for (String macAddress : T.a50310) {
-                    WolSend.wolStart(new IPObjectSocket(macAddress, IPBrodcastList.DEOKSEONGGWAN_3F));
+//                    WolSend.wolStart(new IPObjectSocket(macAddress, IPBrodcastList.DEOKSEONGGWAN_3F));
                 }
             }
         });

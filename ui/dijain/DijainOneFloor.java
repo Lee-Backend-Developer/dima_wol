@@ -33,7 +33,7 @@ public class DijainOneFloor<T extends DijainComputerRoomMacAddr> extends JFrame{
             @Override
             public void mouseClicked(MouseEvent e) {
                 for (String macAddress : T.a100111) {
-                    WolSendArrayAdapter.ipObjectSocket((new IPObjectSocket(macAddress, IPBrodcastList.DIJAINCENTER_1F_2F)));
+//                    WolSendArrayAdapter.ipObjectSocket((new IPObjectSocket(macAddress, IPBrodcastList.DIJAINCENTER_1F_2F)));
                 }
             }
         });
@@ -41,7 +41,7 @@ public class DijainOneFloor<T extends DijainComputerRoomMacAddr> extends JFrame{
             @Override
             public void mouseClicked(MouseEvent e) {
                 for (String macAddress : T.a100116) {
-                    WolSend.wolStart(new IPObjectSocket(macAddress, IPBrodcastList.DIJAINCENTER_1F_2F));
+                    //WolSend.wolStart(new IPObjectSocket(macAddress, IPBrodcastList.DIJAINCENTER_1F_2F));
                 }
             }
         });
