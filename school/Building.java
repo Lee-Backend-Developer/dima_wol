@@ -16,4 +16,9 @@ public class Building {
     public List<Floor> getFloors() {
         return floors;
     }
+
+    // 층수 가져오기
+    public int getFloorCount() {
+        return floors.size();
+    }
 }

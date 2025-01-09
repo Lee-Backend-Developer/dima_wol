@@ -17,4 +17,21 @@ public class Room extends Floor {
         this.macAddress = macAddress;
         this.broadcastAddress = broadcastAddress;
     }
+
+    // 맥어드레스 가져오기
+    public String getMacAddress() {
+        StringBuilder stringBuilder = new StringBuilder();
+        for (String mac : macAddress) {
+            stringBuilder.append(mac).append("\n");
+        }
+        return stringBuilder.toString();
+    }
+
+    public String getRoomName() {
+        return roomName;
+    }
+
+    public String getBroadcastAddress() {
+        return broadcastAddress;
+    }
 }
