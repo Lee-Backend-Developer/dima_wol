@@ -1,9 +1,6 @@
 package school;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public abstract class Floor {
     // 층 수
@@ -44,6 +41,17 @@ public abstract class Floor {
                         .append("\n"));
 
         return stringBuilder.toString();
+    }
+
+    // 강의실을 추가함
+    public static void addRoom(Map<String, Room> roomMap, Floor[] floorArray) {
+        if(Objects.isNull(roomMap))
+            throw new IllegalArgumentException("rooms is null");
+
+        roomMap.forEach((roomName, room) -> {
+            floorArray[room.getFloorNumber() - 1]
+                    .getRooms().put(roomName, room);
+        });
     }
 
 }

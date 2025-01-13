@@ -2,6 +2,8 @@ package school;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.Objects;
 
 public class Building {
     // 건물 이름
@@ -31,4 +33,5 @@ public class Building {
             getFloors().add(floor);
         }
     }
+
 }
