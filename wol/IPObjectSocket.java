@@ -1,19 +1,17 @@
 package wol;
 
-import wol.ip.list.IPBrodcastList;
-
 public class IPObjectSocket {
 
     private final String macAddr;
     private final byte[] macBytes;
-    private final IPBrodcastList ipBrodcastList;
+    private final String ipBroadcast;
 
-    public IPObjectSocket(String macAddr, IPBrodcastList ipBrodcastList) {
+    public IPObjectSocket(String macAddr, String ipBroadcast) {
         validationMacAddr(macAddr); // 맥주소 유효성 검사
 
         this.macAddr = macAddr;
         this.macBytes = getMacBytes(macAddr);
-        this.ipBrodcastList = ipBrodcastList;
+        this.ipBroadcast = ipBroadcast;
     }
 
     public String getMacAddr() {
@@ -21,7 +19,7 @@ public class IPObjectSocket {
     }
 
     public String getIpBroadcast() {
-        return ipBrodcastList.getBrodcast();
+        return ipBroadcast;
     }
 
     public byte[] getMacBytes() {

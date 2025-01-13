@@ -1,5 +1,8 @@
 package wol;
 
+import com.sun.org.apache.xerces.internal.impl.dv.util.HexBin;
+import sun.misc.HexDumpEncoder;
+
 import java.io.IOException;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
@@ -34,7 +37,7 @@ class WolSend {
             System.out.println("Wake-on-LAN packet sent.");
         }
         catch (Exception e) {
-            System.out.println("Failed to send Wake-on-LAN packet: + e");
+            System.out.println("Failed to send Wake-on-LAN packet:" + e);
             System.exit(1);
         }
     }
@@ -55,7 +58,7 @@ class WolSend {
             System.out.println("Wake-on-LAN packet sent.");
         }
         catch (Exception e) {
-            System.out.println("Failed to send Wake-on-LAN packet: + e");
+            System.out.println("Failed to send Wake-on-LAN packet:" + e);
             System.exit(1);
         }
     }
