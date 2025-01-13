@@ -13,9 +13,6 @@ import static wol.ip.list.DeogseongComputerComputerBuilding.*;
 
 public class DeogseongBuilding extends Building {
 
-    private static DeogseongBuilding instance = new DeogseongBuilding();
-
-
     public DeogseongBuilding() {
         super("덕성관");
 
@@ -26,6 +23,7 @@ public class DeogseongBuilding extends Building {
         roomMap.put("50204", new Room(2, "50204", a50204, IPBrodcastList.DEOKSEONGGWAN_2F.getBrodcast()));
         roomMap.put("50206", new Room(2, "50206", a50206, IPBrodcastList.DEOKSEONGGWAN_2F.getBrodcast()));
         roomMap.put("50209", new Room(2, "50209", a50209, IPBrodcastList.DEOKSEONGGWAN_2F.getBrodcast()));
+        roomMap.put("50211", new Room(2, "50211", a50211, IPBrodcastList.DEOKSEONGGWAN_2F.getBrodcast()));
 
         // 3층
         roomMap.put("50305", new Room(3, "50305", a50305, IPBrodcastList.DEOKSEONGGWAN_3F.getBrodcast()));
@@ -44,9 +42,5 @@ public class DeogseongBuilding extends Building {
 
         Floor.addRoom(roomMap, computerLabs);
 
-    }
-
-    public static DeogseongBuilding getInstance() {
-        return instance;
     }
 }
