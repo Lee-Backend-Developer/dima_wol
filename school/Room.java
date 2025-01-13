@@ -27,6 +27,7 @@ public class Room extends Floor {
         return stringBuilder.toString();
     }
 
+
     public String getRoomName() {
         return roomName;
     }
