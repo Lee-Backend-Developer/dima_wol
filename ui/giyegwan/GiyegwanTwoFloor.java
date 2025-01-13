@@ -3,7 +3,10 @@ package ui.giyegwan;
 import com.intellij.uiDesigner.core.GridConstraints;
 import com.intellij.uiDesigner.core.GridLayoutManager;
 import com.intellij.uiDesigner.core.Spacer;
+import school.Room;
+import school_building.GiyegwanBuilding;
 import ui.common.BackMove;
+import wol.WolSendArrayAdapter;
 import wol.ip.list.GiyegwanComputerRoomMacAddr;
 import wol.IPObjectSocket;
 import wol.ip.list.IPBrodcastList;
@@ -14,11 +17,13 @@ import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
-public class GiyegwanTwoFloor<T extends GiyegwanComputerRoomMacAddr> extends JFrame{
+public class GiyegwanTwoFloor<T extends GiyegwanComputerRoomMacAddr> extends JFrame {
     private JButton a30225Button;
     private JButton disableButton;
     private JButton backButton;
     private JPanel panel;
+    private GiyegwanBuilding giyegwanBuilding = new GiyegwanBuilding();
+
 
     public GiyegwanTwoFloor() {
         setContentPane(panel);
@@ -38,18 +43,12 @@ public class GiyegwanTwoFloor<T extends GiyegwanComputerRoomMacAddr> extends JFr
         a30225Button.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                for (String macAddress : T.a30225) {
-//                    WolSend.wolStart(new IPObjectSocket(macAddress, IPBrodcastList.GIYEGWAN_2F));
-                }
+                Room room = giyegwanBuilding.getFloors()
+                        .get(1).getRooms().get("30225");
+
+                WolSendArrayAdapter.ipObjectSocket(room.getMacAddressArray(), room.getBroadcastAddress());
             }
         });
-    }
-
-    public void wolStart(String[] macAddr) {
-
-        for (String macAddress : macAddr) {
-//            WolSend.wolStart(new IPObjectSocket(macAddress, IPBrodcastList.GIYEGWAN_2F));
-        }
     }
 
     {
@@ -68,18 +67,18 @@ public class GiyegwanTwoFloor<T extends GiyegwanComputerRoomMacAddr> extends JFr
      */
     private void $$$setupUI$$$() {
         panel = new JPanel();
-        panel.setLayout(new GridLayoutManager(4, 1, new Insets(0, 0, 0, 0), -1, -1));
+        panel.setLayout(new com.intellij.uiDesigner.core.GridLayoutManager(4, 1, new Insets(0, 0, 0, 0), -1, -1));
         a30225Button = new JButton();
-        a30225Button.setText("30224");
-        panel.add(a30225Button, new GridConstraints(1, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
-        final Spacer spacer1 = new Spacer();
-        panel.add(spacer1, new GridConstraints(3, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_VERTICAL, 1, GridConstraints.SIZEPOLICY_WANT_GROW, null, null, null, 0, false));
+        a30225Button.setText("30225");
+        panel.add(a30225Button, new com.intellij.uiDesigner.core.GridConstraints(1, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+        final com.intellij.uiDesigner.core.Spacer spacer1 = new com.intellij.uiDesigner.core.Spacer();
+        panel.add(spacer1, new com.intellij.uiDesigner.core.GridConstraints(3, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_VERTICAL, 1, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, null, null, null, 0, false));
         disableButton = new JButton();
         disableButton.setText("사용X");
-        panel.add(disableButton, new GridConstraints(2, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+        panel.add(disableButton, new com.intellij.uiDesigner.core.GridConstraints(2, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         backButton = new JButton();
         backButton.setText("이전");
-        panel.add(backButton, new GridConstraints(0, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+        panel.add(backButton, new com.intellij.uiDesigner.core.GridConstraints(0, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
     }
 
     /**
@@ -88,4 +87,5 @@ public class GiyegwanTwoFloor<T extends GiyegwanComputerRoomMacAddr> extends JFr
     public JComponent $$$getRootComponent$$$() {
         return panel;
     }
+
 }
