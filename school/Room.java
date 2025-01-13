@@ -18,13 +18,18 @@ public class Room extends Floor {
         this.broadcastAddress = broadcastAddress;
     }
 
-    // 맥어드레스 가져오기
+    // 맥어드레스 문자열로 가져오기
     public String getMacAddress() {
         StringBuilder stringBuilder = new StringBuilder();
         for (String mac : macAddress) {
             stringBuilder.append(mac).append("\n");
         }
         return stringBuilder.toString();
+    }
+
+    // 맥어드레스 배열로 가져옴
+    public String[] getMacAddressArray() {
+        return macAddress;
     }
 
 
