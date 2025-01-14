@@ -28,12 +28,17 @@ GIF Images
 
 <br>
 
-## 기술 스택
-
-| JavaScript | TypeScript |  React   |  Node   |
-| :--------: | :--------: | :------: | :-----: |
-|   ![js]    |   ![ts]    | ![react] | ![node] |
-
+<div id="stack">
+    <h2>기술 스택</h2>
+    <table>
+        <tr>
+        <td style="text-align: center"><strong>Java</strong></td>
+        </tr>
+        <tr>
+        <td> <img src="./images/stack/java.svg"> </td>
+        </tr>
+    </table>
+</div>
 <br>
 
 ## 구현 기능
@@ -63,8 +68,6 @@ GIF Images
 
 </div>
 
-<br>
-
 ## 라이센스
 
 MIT &copy; [NoHack](mailto:lbjp114@gmail.com)
@@ -75,3 +78,4 @@ MIT &copy; [NoHack](mailto:lbjp114@gmail.com)
 [ts]: /images/stack/typescript.svg
 [react]: /images/stack/react.svg
 [node]: /images/stack/node.svg
+[java]: /images/stack/java.svg
