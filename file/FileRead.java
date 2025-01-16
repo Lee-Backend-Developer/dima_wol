@@ -1,12 +1,11 @@
 package file;
 
 import java.io.*;
-import java.net.URL;
 
 public class FileRead {
 
     public void fileRead() throws IOException {
-        File file = new File("computerLab\\30225.txt");
+        File file = new File(FilePathCustom.A30225);
 
         BufferedReader fileBuffer = new BufferedReader(new FileReader(file));
 
