@@ -23,11 +23,13 @@ public class FileRead {
 
     }
 
-    public void macAddressFileRead(String location) throws IOException {
+    // 파일에서 맥주소를 가지고 온다.
+    public List<String> macAddressFileRead(String location) throws IOException {
 
+        String path = FilePathExport.getInstance()
+                .path(location);
 
-
-        File file = new File(FilePathCustom.A30225);
+        File file = new File(path);
 
         BufferedReader fileBuffer = new BufferedReader(new FileReader(file));
 
@@ -44,5 +46,7 @@ public class FileRead {
 
         // 파일읽기 닫기
         fileBuffer.close();
+
+        return fileStrings;
     }
 }
