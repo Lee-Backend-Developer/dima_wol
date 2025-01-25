@@ -43,6 +43,6 @@ public abstract class FilePathCustom {
 
     // 2층
     static final String DIJAIN_2F_BRODCAST = "dijain_2f_brocast.txt";
-    static final String A100201 = FOLDER_PATH + DIJAIN + "100201.txt";
+    static final String A100210 = FOLDER_PATH + DIJAIN + "100201.txt";
 
 }
