@@ -45,8 +45,8 @@ public class FilePathExport {
             case "100111" -> FilePathCustom.A100111;
             case "100116" -> FilePathCustom.A100116;
             case "100210" -> FilePathCustom.A100210;
-            case "dijain1f" -> FilePathCustom.DIJAIN_1F_BRODCAST;
-            case "dijain2f" -> FilePathCustom.DIJAIN_2F_BRODCAST;
+            case "dijain_1f" -> FilePathCustom.DIJAIN_1F_BRODCAST;
+            case "dijain_2f" -> FilePathCustom.DIJAIN_2F_BRODCAST;
 
             default -> "";
         };

@@ -148,5 +148,6 @@ Temporary Items
 # iCloud generated files
 *.icloud
 
-### 맥 주소 리스트 커밋 X
+### 맥주소, 브로드캐스트 커밋 방지
 wol/ip/list/*
+computerLab/*/*

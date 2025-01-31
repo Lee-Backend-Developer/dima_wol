@@ -3,8 +3,8 @@ import school_building.DeogseongBuilding;
 import school_building.DijainBuilding;
 import school_building.GiyegwanBuilding;
 import ui.MainForm;
+import wol.WolSendArrayAdapter;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public class Main {
@@ -14,13 +14,17 @@ public class Main {
     public static DijainBuilding dijainBuilding = new DijainBuilding();
 
     public static void main(String[] args) {
-        FileRead fileRead = new FileRead();
+        /*FileRead fileRead = new FileRead();
         try {
-            fileRead.fileRead();
+            WolSendArrayAdapter.ipObjectSocket(
+                    fileRead.fileRead("giyegwan2f")
+                            .toArray(String[]::new)
+                    , "8.8.8.8");
+
         } catch (IOException e) {
             throw new RuntimeException(e);
-        }
+        }*/
 
-//        new MainForm();
+        new MainForm();
     }
 }

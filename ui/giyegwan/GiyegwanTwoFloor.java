@@ -3,6 +3,7 @@ package ui.giyegwan;
 import com.intellij.uiDesigner.core.GridConstraints;
 import com.intellij.uiDesigner.core.GridLayoutManager;
 import com.intellij.uiDesigner.core.Spacer;
+import file.FileRead;
 import school.Room;
 import school_building.GiyegwanBuilding;
 import ui.common.BackMove;
@@ -16,6 +17,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.util.List;
 
 public class GiyegwanTwoFloor<T extends GiyegwanComputerRoomMacAddr> extends JFrame {
     private JButton a30225Button;
@@ -43,10 +45,10 @@ public class GiyegwanTwoFloor<T extends GiyegwanComputerRoomMacAddr> extends JFr
         a30225Button.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                Room room = giyegwanBuilding.getFloors()
-                        .get(1).getRooms().get("30225");
+                List<String> mac = FileRead.fileRead("30225");
+                String brodcast = FileRead.fileRead("giyegwan2f").getFirst();
 
-                WolSendArrayAdapter.ipObjectSocket(room.getMacAddressArray(), room.getBroadcastAddress());
+                WolSendArrayAdapter.ipObjectSocket(mac.toArray(new String[0]), brodcast);
             }
         });
     }
