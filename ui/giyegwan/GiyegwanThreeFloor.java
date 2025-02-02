@@ -1,15 +1,11 @@
 package ui.giyegwan;
 
+import button_event.GiyegwanButton;
 import com.intellij.uiDesigner.core.GridConstraints;
 import com.intellij.uiDesigner.core.GridLayoutManager;
 import com.intellij.uiDesigner.core.Spacer;
-import school.Room;
-import school_building.DijainBuilding;
 import school_building.GiyegwanBuilding;
 import ui.common.BackMove;
-import wol.IPObjectSocket;
-import wol.WolSendArrayAdapter;
-import wol.ip.list.IPBrodcastList;
 import wol.ip.list.GiyegwanComputerRoomMacAddr;
 
 import javax.swing.*;
@@ -44,19 +40,14 @@ public class GiyegwanThreeFloor<T extends GiyegwanComputerRoomMacAddr> extends J
         a30311Button.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                Room room = giyegwanBuilding.getFloors()
-                        .get(2).getRooms().get("30311");
+                GiyegwanButton.a30311();
 
-                WolSendArrayAdapter.ipObjectSocket(room.getMacAddressArray(), room.getBroadcastAddress());
             }
         });
         a30323Button.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                Room room = giyegwanBuilding.getFloors()
-                        .get(2).getRooms().get("30323");
-
-                WolSendArrayAdapter.ipObjectSocket(room.getMacAddressArray(), room.getBroadcastAddress());
+                GiyegwanButton.a30323();
             }
         });
     }

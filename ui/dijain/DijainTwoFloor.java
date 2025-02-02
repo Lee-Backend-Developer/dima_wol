@@ -1,5 +1,6 @@
 package ui.dijain;
 
+import button_event.DijainButton;
 import school.Room;
 import school_building.DijainBuilding;
 import ui.common.BackMove;
@@ -24,6 +25,7 @@ public class DijainTwoFloor<T extends DijainComputerRoomMacAddr> extends JFrame 
         setSize(500, 500);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setVisible(true);
+
         이전Button.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
@@ -31,14 +33,11 @@ public class DijainTwoFloor<T extends DijainComputerRoomMacAddr> extends JFrame 
                 setVisible(false);
             }
         });
+
         a100212Button.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-
-                Room room = dijainBuilding.getFloors()
-                        .get(1).getRooms().get("100212");
-
-                WolSendArrayAdapter.ipObjectSocket(room.getMacAddressArray(), room.getBroadcastAddress());
+                DijainButton.a100212();
             }
         });
     }

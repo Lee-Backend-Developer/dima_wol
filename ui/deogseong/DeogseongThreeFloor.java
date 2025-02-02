@@ -1,5 +1,6 @@
 package ui.deogseong;
 
+import button_event.DeogseongButton;
 import school.Room;
 import school_building.DeogseongBuilding;
 import ui.common.BackMove;
@@ -35,24 +36,18 @@ public class DeogseongThreeFloor extends JFrame {
                 setVisible(false);
             }
         });
+
         a50305Button.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                Room room = deogseongBuilding.getFloors()
-                        .get(2).getRooms().get("50305");
-
-                WolSendArrayAdapter.ipObjectSocket(room.getMacAddressArray(), room.getBroadcastAddress());
-
+                DeogseongButton.a50305();
             }
         });
+
         a50310Button.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                Room room = deogseongBuilding.getFloors()
-                        .get(2).getRooms().get("50310");
-
-                WolSendArrayAdapter.ipObjectSocket(room.getMacAddressArray(), room.getBroadcastAddress());
-
+                DeogseongButton.a50310();
             }
         });
     }

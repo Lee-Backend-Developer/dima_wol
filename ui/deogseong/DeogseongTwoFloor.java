@@ -1,5 +1,6 @@
 package ui.deogseong;
 
+import button_event.DeogseongButton;
 import school.Room;
 import school_building.DeogseongBuilding;
 import wol.IPObjectSocket;
@@ -43,46 +44,35 @@ public class DeogseongTwoFloor extends JFrame {
         a50203Button.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                Room room = deogseongBuilding.getFloors()
-                        .get(1).getRooms().get("50203");
-
-                WolSendArrayAdapter.ipObjectSocket(room.getMacAddressArray(), room.getBroadcastAddress());
+                DeogseongButton.a50203();
             }
         });
+
         a50204Button.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                Room room = deogseongBuilding.getFloors()
-                        .get(1).getRooms().get("50204");
-
-                WolSendArrayAdapter.ipObjectSocket(room.getMacAddressArray(), room.getBroadcastAddress());
+                DeogseongButton.a50204();
             }
         });
+
         a50206Button.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                Room room = deogseongBuilding.getFloors()
-                        .get(1).getRooms().get("50206");
-
-                WolSendArrayAdapter.ipObjectSocket(room.getMacAddressArray(), room.getBroadcastAddress());
+                DeogseongButton.a50206();
             }
         });
+
         a50209Button.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                Room room = deogseongBuilding.getFloors()
-                        .get(1).getRooms().get("50209");
-
-                WolSendArrayAdapter.ipObjectSocket(room.getMacAddressArray(), room.getBroadcastAddress());
+                DeogseongButton.a50209();
             }
         });
+
         a50211Button.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                Room room = deogseongBuilding.getFloors()
-                        .get(1).getRooms().get("50211");
-
-                WolSendArrayAdapter.ipObjectSocket(room.getMacAddressArray(), room.getBroadcastAddress());
+                DeogseongButton.a50211();
             }
         });
     }

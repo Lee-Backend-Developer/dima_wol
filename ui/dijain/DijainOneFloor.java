@@ -1,5 +1,6 @@
 package ui.dijain;
 
+import button_event.DijainButton;
 import school.Room;
 import school_building.DijainBuilding;
 import ui.common.BackMove;
@@ -38,20 +39,13 @@ public class DijainOneFloor<T extends DijainComputerRoomMacAddr> extends JFrame 
         a100111Button.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                Room room = dijainBuilding.getFloors()
-                        .get(0).getRooms().get("100111");
-
-                WolSendArrayAdapter.ipObjectSocket(room.getMacAddressArray(), room.getBroadcastAddress());
+                DijainButton.a100111();
             }
         });
         a100116Button.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-
-                Room room = dijainBuilding.getFloors()
-                        .get(0).getRooms().get("100116");
-
-                WolSendArrayAdapter.ipObjectSocket(room.getMacAddressArray(), room.getBroadcastAddress());
+                DijainButton.a100116();
             }
         });
     }
