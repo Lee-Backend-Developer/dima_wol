@@ -1,11 +1,5 @@
 <h1>동아방송예술대학교 WOL 프로그램</h1>
 
-<p align="center">
-  <br>
-  <img src="images/common/logo-sample.jpeg">
-  <br>
-</p>
-
 ## 목차
 <div id="toc">
 <ul>
@@ -22,9 +16,7 @@
 생각이 들었습니다. 이 아이디어를 바탕으로, 사용자가 일일이 전원을 누르지 않고도 여러 대의 컴퓨터를 효율적으로 관리할 수 있는 프로그램을 만들어보게 되었습니다.
 </div>
 
-<p align="center">
-GIF Images
-</p>
+<img src="images/info/wol.gif">
 
 <br>
 
