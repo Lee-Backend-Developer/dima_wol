@@ -1,8 +1,5 @@
 package wol;
 
-import com.sun.org.apache.xerces.internal.impl.dv.util.HexBin;
-import sun.misc.HexDumpEncoder;
-
 import java.io.IOException;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;

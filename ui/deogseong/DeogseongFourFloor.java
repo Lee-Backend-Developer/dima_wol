@@ -1,5 +1,6 @@
 package ui.deogseong;
 
+import button_event.DeogseongButton;
 import school.Room;
 import school_building.DeogseongBuilding;
 import ui.common.BackMove;
@@ -33,14 +34,11 @@ public class DeogseongFourFloor<T extends DeogseongComputerComputerBuilding> ext
                 setVisible(false);
             }
         });
+
         a50408Button.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                Room room = deogseongBuilding.getFloors()
-                        .get(3).getRooms().get("50408");
-
-                WolSendArrayAdapter.ipObjectSocket(room.getMacAddressArray(), room.getBroadcastAddress());
-
+                DeogseongButton.a50408();
             }
         });
     }
