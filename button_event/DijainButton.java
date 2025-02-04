@@ -5,7 +5,7 @@ import wol.WolSendArrayAdapter;
 
 import java.util.List;
 
-public class Dijain implements ButtonEvent {
+public class DijainButton implements ButtonEvent {
     /** 디자인센터 **/
     public static void a100111() {
         List<String> mac = FileRead.fileRead("100111");
