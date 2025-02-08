@@ -2,7 +2,6 @@ package ui.deogseong;
 
 import button_event.DeogseongButton;
 import school.Room;
-import school_building.DeogseongBuilding;
 import ui.common.BackMove;
 import wol.WolSendArrayAdapter;
 import wol.ip.list.DeogseongComputerComputerBuilding;
@@ -16,9 +15,6 @@ public class DeogseongFourFloor<T extends DeogseongComputerComputerBuilding> ext
     private JButton 이전Button;
     private JButton a50408Button;
     private JPanel panel;
-
-    private DeogseongBuilding deogseongBuilding = new DeogseongBuilding();
-
 
     public DeogseongFourFloor() {
         setContentPane(panel);

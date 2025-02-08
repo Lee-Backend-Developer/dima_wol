@@ -4,7 +4,6 @@ import button_event.GiyegwanButton;
 import com.intellij.uiDesigner.core.GridConstraints;
 import com.intellij.uiDesigner.core.GridLayoutManager;
 import com.intellij.uiDesigner.core.Spacer;
-import school_building.GiyegwanBuilding;
 import ui.common.BackMove;
 import wol.ip.list.GiyegwanComputerRoomMacAddr;
 
@@ -18,9 +17,6 @@ public class GiyegwanThreeFloor<T extends GiyegwanComputerRoomMacAddr> extends J
     private JButton a30311Button;
     private JButton a30323Button;
     private JPanel panel;
-
-    private GiyegwanBuilding giyegwanBuilding = new GiyegwanBuilding();
-
 
     public GiyegwanThreeFloor() {
         setContentPane(panel);

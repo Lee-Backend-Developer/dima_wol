@@ -1,7 +1,6 @@
 package ui.dijain;
 
 import school.Room;
-import school_building.DijainBuilding;
 import ui.common.BackMove;
 import wol.WolSendArrayAdapter;
 import wol.ip.list.DijainComputerRoomMacAddr;
@@ -15,8 +14,6 @@ public class DijainThreeFloor<T extends DijainComputerRoomMacAddr> extends JFram
     private JButton 이전Button;
     private JButton a100315Button;
     private JPanel panel;
-
-    private DijainBuilding dijainBuilding = new DijainBuilding();
 
     public DijainThreeFloor() {
         setContentPane(panel);
@@ -36,10 +33,6 @@ public class DijainThreeFloor<T extends DijainComputerRoomMacAddr> extends JFram
             public void mouseClicked(MouseEvent e) {
                 //todo 없음
 
-                Room room = dijainBuilding.getFloors()
-                        .get(2).getRooms().get("100315");
-
-                WolSendArrayAdapter.ipObjectSocket(room.getMacAddressArray(), room.getBroadcastAddress());
             }
         });
     }

@@ -2,12 +2,10 @@ package ui.dijain;
 
 import button_event.DijainButton;
 import school.Room;
-import school_building.DijainBuilding;
 import ui.common.BackMove;
 import wol.IPObjectSocket;
 import wol.WolSendArrayAdapter;
 import wol.ip.list.DijainComputerRoomMacAddr;
-import wol.ip.list.IPBrodcastList;
 
 import javax.swing.*;
 import java.awt.*;
@@ -19,8 +17,6 @@ public class DijainOneFloor<T extends DijainComputerRoomMacAddr> extends JFrame 
     private JButton 이전Button;
     private JButton a100111Button;
     private JButton a100116Button;
-
-    private DijainBuilding dijainBuilding = new DijainBuilding();
 
     public DijainOneFloor() {
         setContentPane(panel);

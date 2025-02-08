@@ -1,7 +1,5 @@
 package wol;
 
-import wol.ip.list.IPBrodcastList;
-
 public interface WolSendArrayAdapter {
 
     /**

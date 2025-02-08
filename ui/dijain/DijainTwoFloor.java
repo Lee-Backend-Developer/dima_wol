@@ -2,7 +2,6 @@ package ui.dijain;
 
 import button_event.DijainButton;
 import school.Room;
-import school_building.DijainBuilding;
 import ui.common.BackMove;
 import wol.WolSendArrayAdapter;
 import wol.ip.list.DijainComputerRoomMacAddr;
@@ -16,8 +15,6 @@ public class DijainTwoFloor<T extends DijainComputerRoomMacAddr> extends JFrame 
     private JButton 이전Button;
     private JButton a100212Button;
     private JPanel panel;
-
-    private DijainBuilding dijainBuilding = new DijainBuilding();
 
     public DijainTwoFloor() {
         setContentPane(panel);

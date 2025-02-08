@@ -2,12 +2,10 @@ package ui.deogseong;
 
 import button_event.DeogseongButton;
 import school.Room;
-import school_building.DeogseongBuilding;
 import ui.common.BackMove;
 import wol.IPObjectSocket;
 import wol.WolSendArrayAdapter;
 import wol.ip.list.DeogseongComputerComputerBuilding;
-import wol.ip.list.IPBrodcastList;
 
 import javax.swing.*;
 import java.awt.*;
@@ -19,9 +17,6 @@ public class DeogseongThreeFloor extends JFrame {
     private JButton 이전Button;
     private JButton a50305Button;
     private JButton a50310Button;
-
-    private DeogseongBuilding deogseongBuilding = new DeogseongBuilding();
-
 
     public DeogseongThreeFloor() {
         setContentPane(panel);
